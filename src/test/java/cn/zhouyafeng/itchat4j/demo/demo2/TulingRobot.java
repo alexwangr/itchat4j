@@ -22,7 +22,7 @@ import cn.zhouyafeng.itchat4j.utils.tools.DownloadTools;
 
 /**
  * 图灵机器人示例
- * 
+ *
  * @author https://github.com/yaphone
  * @date 创建时间：2017年4月24日 上午12:13:26
  * @version 1.0
@@ -81,7 +81,7 @@ public class TulingRobot implements IMsgHandlerFace {
 
 	public static void main(String[] args) {
 		IMsgHandlerFace msgHandler = new TulingRobot();
-		Wechat wechat = new Wechat(msgHandler, "D://itchat4j/login");
+		Wechat wechat = new Wechat(msgHandler, "/Users/wangrong/project/itchat4j/img/login");
 		wechat.start();
 	}
 

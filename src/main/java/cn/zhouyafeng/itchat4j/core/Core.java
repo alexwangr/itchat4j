@@ -14,7 +14,7 @@ import cn.zhouyafeng.itchat4j.utils.enums.parameters.BaseParaEnum;
 
 /**
  * 核心存储类，全局只保存一份，单例模式
- * 
+ *
  * @author https://github.com/yaphone
  * @date 创建时间：2017年4月23日 下午2:33:56
  * @version 1.0
@@ -50,6 +50,7 @@ public class Core {
 	private List<JSONObject> memberList = new ArrayList<JSONObject>(); // 好友+群聊+公众号+特殊账号
 	private List<JSONObject> contactList = new ArrayList<JSONObject>();// 好友
 	private List<JSONObject> groupList = new ArrayList<JSONObject>();; // 群
+	private Map<String, String> groupIdNameMap = new HashMap<String, String>();//群ID、名称字典
 	private Map<String, JSONArray> groupMemeberMap = new HashMap<String, JSONArray>(); // 群聊成员字典
 	private List<JSONObject> publicUsersList = new ArrayList<JSONObject>();;// 公众号／服务号
 	private List<JSONObject> specialUsersList = new ArrayList<JSONObject>();;// 特殊账号
@@ -75,7 +76,7 @@ public class Core {
 	public Map<String, Object> getParamMap() {
 		return new HashMap<String, Object>(1) {
 			/**
-			 * 
+			 *
 			 */
 			private static final long serialVersionUID = 1L;
 
@@ -273,4 +274,11 @@ public class Core {
 		this.indexUrl = indexUrl;
 	}
 
+	public Map<String, String> getGroupIdNameMap() {
+		return groupIdNameMap;
+	}
+
+	public void setGroupIdNameMap(Map<String, String> groupIdNameMap) {
+		this.groupIdNameMap = groupIdNameMap;
+	}
 }

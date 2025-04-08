@@ -1,10 +1,12 @@
 package cn.zhouyafeng.itchat4j.beans;
 
+import com.alibaba.fastjson.JSON;
+
 import java.io.Serializable;
 
 /**
  * 收到的微信消息
- * 
+ *
  * @author https://github.com/yaphone
  * @date 创建时间：2017年7月3日 下午10:28:06
  * @version 1.0
@@ -12,7 +14,7 @@ import java.io.Serializable;
  */
 public class BaseMsg implements Serializable {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	private int subMsgType;
@@ -289,5 +291,9 @@ public class BaseMsg implements Serializable {
 
 	public void setFileSize(String fileSize) {
 		this.fileSize = fileSize;
+	}
+
+	public String toString() {
+		return JSON.toJSONString(this);
 	}
 }
