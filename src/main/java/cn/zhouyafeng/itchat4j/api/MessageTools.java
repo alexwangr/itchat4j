@@ -313,7 +313,7 @@ public class MessageTools {
         if (entity != null) {
             try {
                 String result = EntityUtils.toString(entity, Consts.UTF_8);
-                LOG.info("webWxSendMsgImg result:" + result);
+                LOG.info("webWxSendMsgImg 111result:" + result);
                 return JSON.parseObject(result).getJSONObject("BaseResponse").getInteger("Ret") == 0;
             } catch (Exception e) {
                 LOG.error("webWxSendMsgImg 错误： ", e);
