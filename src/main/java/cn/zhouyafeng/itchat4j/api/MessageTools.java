@@ -316,7 +316,7 @@ public class MessageTools {
                 LOG.info("webWxSendMsgImg result:" + result);
                 return JSON.parseObject(result).getJSONObject("BaseResponse").getInteger("Ret") == 0;
             } catch (Exception e) {
-                LOG.error("webWxSendMsgImg 错误： ", e);
+                LOG.error("webWxSendMsgImg 11错误： ", e);
             }
         }
         return false;
